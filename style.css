@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.heading {
+    display: flex;
+    margin: 20px;
+    padding-top: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    color: rebeccapurple;
+
+}
+
+article {
+    border: 1px solid wheat;
+    padding-bottom: 10px;
+    margin: 20px auto;
+
+
+
+}
+
+article h2 {
+
+
+    color: rebeccapurple;
+    padding: 10px;
+}
+
+article p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.other {
+    background: gray;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+}
+
+.select {
+    display: flex;
+    flex-flow: column;
+    line-height: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 0;
+    display: flex;
+
+
+}
+
+button {
+    background: rebeccapurple;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+
+footer {
+    display: block;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 760px) {
+
+    form {
+
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+
+
+    }
+
+    footer {
+        display: block;
+        margin: -60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .other {
+        background: gray;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
