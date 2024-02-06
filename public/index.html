@@ -16,48 +16,45 @@
         </div>
 
         <section>
-            <article>
-                <h2>Invoice</h2>
-                <p>yoshi owes $500 for web design work</p>
-            </article>
-            <article>
-                <h2>Payment</h2>
-                <p>mario is owed $500 for backend work</p>
-            </article>
+            <ul>
+
+            </ul>
         </section>
+
 
         <hr>
 
         <div>
 
             <section class="other">
-                <form action="#">
+                <form action="#" class="web-form">
 
                     <div class="select">
 
                         <span>Type</span>
-                        <select name="" id="">
-                            <option value="payment">Payment</option>
-                            <option value="invoice">Invoice</option>
+                        <select name="" id="select">
+                            <option value="none">Select</option>
+                            <option value="Payment">Payment</option>
+                            <option value="Invoice">Invoice</option>
                         </select>
                     </div>
 
                     <div class="select">
 
                         <span>From / To </span>
-                        <input type="text" name="" id="" placeholder="from / to">
+                        <input type="text" name="" id="fromTo" placeholder="from / to">
                     </div>
 
                     <div class="select">
 
                         <span>Details</span>
-                        <input type="text" name="" id="" placeholder="details">
+                        <input type="text" name="" id="details" placeholder="details">
                     </div>
 
                     <div class="select">
 
                         <span>Amount($)</span>
-                        <input type="text" name="" id="" placeholder="Amount($)">
+                        <input type="number" name="" id="amount" placeholder="Amount($)">
                     </div>
 
                     <button>ADD</button>
@@ -65,7 +62,9 @@
             </section>
 
             <footer>
-                copyright &copy; micheal peter
+                <a href="www.michealpeter.onrender.com">
+                    copyright &copy; micheal peter
+                </a>
             </footer>
 
 
@@ -73,6 +72,9 @@
         </div>
 
     </div>
+
+    <!--  <script src="sandbox.js"></script> -->
+    <script type="module" src="app.js"></script>
 
 </body>
 

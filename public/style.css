@@ -31,6 +31,15 @@ article {
 
 }
 
+section ul {
+    display: inline;
+}
+
+
+li {
+    list-style-type: none;
+}
+
 article h2 {
 
 
@@ -80,10 +89,17 @@ button {
 }
 
 footer {
-    display: block;
+
     margin-top: -50px;
     display: flex;
     justify-content: center;
+
+    align-items: center;
+
+}
+
+footer p {
+    text-align: center;
 }
 
 @media screen and (max-width: 760px) {
@@ -99,7 +115,7 @@ footer {
 
     footer {
         display: block;
-        margin: -60px;
+
 
         display: flex;
         justify-content: center;
