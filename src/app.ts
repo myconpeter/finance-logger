@@ -96,11 +96,14 @@ let doc: hasFomatter;
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault()
 
+    let value: [string, string, number]
+    value = [fromTo.value, details.value, amount.valueAsNumber]
+
     if (select.value === 'invoice') {
-        doc = new Invoice(fromTo.value, details.value, amount.valueAsNumber)
+        doc = new Invoice(...value)
 
     } else {
-        doc = new Payments(fromTo.value, details.value, amount.valueAsNumber)
+        doc = new Payments(...value)
 
 
     }
@@ -112,12 +115,38 @@ form.addEventListener('submit', (e: Event) => {
 
 // generic
 
-const addUID = <T>(obj: T) => {
+const addUID = <T extends { name: string }>(obj: T) => {
     let uid = Math.floor(Math.random() * 2000)
     return { ...obj, uid }
 
 }
 
 let docOne = addUID({ name: 'micheal', age: 50 })
+let docTwo = addUID({ name: 'emma' })
 
-console.log(docOne.name)
+console.log(docOne.age, docOne.name)
+
+enum ShopType { BOOK, TITLE, DIRECTOR, FILM, PERSON }
+interface Shop<T> {
+    name: string;
+    shopNumber: number;
+    data: T
+}
+
+let docFive: Shop<object> = {
+    name: 'micheal',
+    shopNumber: ShopType.PERSON,
+    data: { name: 'yoshi' }
+}
+
+
+let docSix: Shop<object> = {
+    name: 'micheal',
+    shopNumber: ShopType.BOOK,
+    data: { title: 'sun', author: 'micheal' }
+}
+
+console.log(docSix, docFive)
+
+
+

@@ -15,3 +15,27 @@ export class Payments implements hasFomatter {
         return `${this.recipient} is owed ${this.amount} for ${this.details}`
     }
 }
+
+
+//  interfaces
+
+interface Resources<T> {
+    uid: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resources<string> = {
+    uid: 1,
+    resourceName: 'micheal',
+    data: 'micheal'
+}
+
+const docFour: Resources<string[]> = {
+    uid: 2,
+    resourceName: 'peter',
+    data: ['micheal', 'ekanem']
+}
+
+
+console.log(docFour, docThree)

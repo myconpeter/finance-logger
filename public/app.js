@@ -57,11 +57,13 @@ const list = new listTemplate(ul);
 let doc;
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    let value;
+    value = [fromTo.value, details.value, amount.valueAsNumber];
     if (select.value === 'invoice') {
-        doc = new Invoice(fromTo.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...value);
     }
     else {
-        doc = new Payments(fromTo.value, details.value, amount.valueAsNumber);
+        doc = new Payments(...value);
     }
     list.render(doc, select.value, 'end');
 });
@@ -71,4 +73,24 @@ const addUID = (obj) => {
     return { ...obj, uid };
 };
 let docOne = addUID({ name: 'micheal', age: 50 });
-console.log(docOne.name);
+let docTwo = addUID({ name: 'emma' });
+console.log(docOne.age, docOne.name);
+var ShopType;
+(function (ShopType) {
+    ShopType[ShopType["BOOK"] = 0] = "BOOK";
+    ShopType[ShopType["TITLE"] = 1] = "TITLE";
+    ShopType[ShopType["DIRECTOR"] = 2] = "DIRECTOR";
+    ShopType[ShopType["FILM"] = 3] = "FILM";
+    ShopType[ShopType["PERSON"] = 4] = "PERSON";
+})(ShopType || (ShopType = {}));
+let docFive = {
+    name: 'micheal',
+    shopNumber: ShopType.PERSON,
+    data: { name: 'yoshi' }
+};
+let docSix = {
+    name: 'micheal',
+    shopNumber: ShopType.BOOK,
+    data: { title: 'sun', author: 'micheal' }
+};
+console.log(docSix, docFive);
